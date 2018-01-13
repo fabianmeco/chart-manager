@@ -1,0 +1,10 @@
+<div class="container">
+  <div>
+    <select class="form-control" name="dataGroup" id="dg" (onchange)="loadGroup($event)">
+      <option value="{{group.id}}" *ngFor="let group of groupList"  > {{group.name}} </option>
+    </select>
+  </div>
+
+
+  <google-chart [data]="pieChartData"></google-chart>
+</div>
